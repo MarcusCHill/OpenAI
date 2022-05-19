@@ -4,9 +4,9 @@ function PromptListItem({ item, onRemovePrompt }) {
 
   return(
     <li>
-      <span>Prompt:{item.prompt}</span>
+      <span>Prompt:{item.userPrompt}</span>
       <br/>
-      <span>GPT-3:</span>
+      <span>OpenAI:{item.openaiResponse}</span>
       <br/>
       <button onClick={() => onRemovePrompt(item.id)}>Remove</button>
     </li>

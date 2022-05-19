@@ -20,7 +20,24 @@ function PromptForm({ onAddPrompt }) {
 
   const handlePromptSubmission = (event) => {
     event.preventDefault();
-    onAddPrompt({ prompt: userPrompt, id: randomKey(20) });
+    let parameters = {
+      prompt: userPrompt,
+      temperature: 0.7,
+      max_tokens: 64,
+    };
+
+    fetch("https://api.openai.com/v1/engines/text-curie-001/completions", {
+      method: "POST",
+      headers: {
+       "Content-Type": "application/json",
+       Authorization: `Bearer ${process.env.REACT_APP_CLIENT_SECRET}`,
+      },
+     body: JSON.stringify(parameters),
+    })
+    .then(response => response.json())
+    .then(data =>
+      onAddPrompt({ userPrompt: userPrompt, openaiResponse: data.choices[0].text, id: randomKey(20) }) 
+    );
     setUserPrompt("");
   };
 

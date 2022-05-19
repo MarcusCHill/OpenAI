@@ -6,7 +6,7 @@ function App() {
 
   const [promptList, setPromptList] = React.useState([]);
 
-  const addPrompt = (newPrompt) => setPromptList([...promptList, newPrompt]);
+  const addPrompt = (newPrompt) => setPromptList([newPrompt, ...promptList]);
 
   const removePrompt = (promptID) => {
     const newPromptList = promptList.filter((item) => item.id !== promptID);
@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div style={{ textAlign: 'center' }}>
-      <h1>Fun with GPT-3</h1>
+      <h1>Fun with OpenAI</h1>
       <PromptForm onAddPrompt={addPrompt}/>
       <PromptList promptList={promptList} onRemovePrompt={removePrompt}/>
     </div>
