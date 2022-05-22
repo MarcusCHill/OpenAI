@@ -1,0 +1,60 @@
+ul{
+  padding: 0rem;
+}
+li{
+  margin: .5rem 0rem;
+}
+input{
+  padding: .75rem .5rem;
+  margin-right: 1rem;
+  width: 25%;
+}
+button{
+  background-color: blue;
+  color: white;
+  padding: .5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+}
+button:hover{
+  background-color: lightblue;
+}
+#formButton{
+  background-color: purple;
+}
+#formButton:hover{
+  background-color: lightgreen;
+}
+#removeButton{
+  background-color: red;
+}
+#removeButton:hover{
+  background-color: pink;
+}
+
+label{
+  position: relative;
+  top: 5px;
+  left: 55px;
+  opacity: 0;
+  transform: translateY(5px);
+  color: Black;
+  font-size: .875rem;
+}
+.promptForm{
+  position: relative;
+  right: 19px;
+  display: flex;
+  justify-content: center;
+}
+.labelTransition{
+  opacity: .7;
+  transform: translateY(0px);
+  transition-property: opacity, transform;
+  transition-duration: 500ms;
+}
+.inputTransition{
+  padding: 1.15rem .5rem .35rem .5rem;
+  transition-property: padding;
+  transition-duration: 500ms;
+}
