@@ -3,7 +3,6 @@ import randomKey from "./randomKey.js"
 
 /*
 Create function component "PromptPresets" that accepts destructed prop onAddPrompt and returns a React fragment containing a heading and list of buttons to be used as preset prompts
-Returns heading title "Try a preset or enter your own prompt in the input feild below!",
 unordered list with list elements that contain a button with onClick event handler.
 */
 function PromptPresets({ onAddPrompt }) {
@@ -18,8 +17,8 @@ function PromptPresets({ onAddPrompt }) {
     */
     let parameters = {
       prompt: event.target.textContent,
-      temperature: 0.5,
-      max_tokens: 64,
+      temperature: 0.6,
+      max_tokens: 100,
     };
 
     fetch("https://api.openai.com/v1/engines/text-curie-001/completions", {
@@ -42,14 +41,14 @@ function PromptPresets({ onAddPrompt }) {
   };
 
   return(
-    <>
-      <h2>Try a preset or enter your own prompt in the input feild below!</h2>
       <ul>
         <li><button onClick={handlePresetSubmission}>This OpenAI API is so cool!</button></li>
         <li><button onClick={handlePresetSubmission}>If you were a type of fruit which would you be and why?</button></li>
         <li><button onClick={handlePresetSubmission}>Share your thoughts on this quote: "Lord, we know what we are, but know not what we may be." - Ophelia</button></li>
+        <li><button onClick={handlePresetSubmission}>Translate to spanish: Hello, my name is Marcus Hill. I enjoy software development!</button></li>
+        <li><button onClick={handlePresetSubmission}>Write 1-3 sentences about unicorns who study STEM.</button></li>
+        <li><button onClick={handlePresetSubmission}>Share two thoughtful affirmations.</button></li>
       </ul>
-    </>
   );
 };
 

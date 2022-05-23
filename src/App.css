@@ -1,7 +1,18 @@
+h2, p{
+  text-align: center;
+  margin: 0em;
+}
+a{
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}
 ul{
-  padding: 0rem;
+  padding: 0em;
 }
 li{
+  text-align: center;
   margin: .5rem 0rem;
 }
 input{
@@ -10,32 +21,34 @@ input{
   width: 25%;
 }
 button{
-  background-color: blue;
+  background-color: rgb(0, 0, 255);
   color: white;
   padding: .5rem 1rem;
   border: none;
   border-radius: 0.25rem;
 }
 button:hover{
-  background-color: lightblue;
+  background-color: rgba(0, 0, 255, .65);
 }
 #formButton{
-  background-color: purple;
+  background-color: rgb(153, 68, 255);
 }
 #formButton:hover{
-  background-color: lightgreen;
+  background-color: rgba(153, 68, 255, .65);
 }
 #removeButton{
-  background-color: red;
+  background-color: rgb(255, 0, 0);
+  margin: .5rem 0rem;
 }
 #removeButton:hover{
-  background-color: pink;
+  background-color: rgba(255, 0, 0, .65);
 }
 
 label{
   position: relative;
   top: 5px;
   left: 55px;
+  height: 5px;
   opacity: 0;
   transform: translateY(5px);
   color: Black;
@@ -57,4 +70,10 @@ label{
   padding: 1.15rem .5rem .35rem .5rem;
   transition-property: padding;
   transition-duration: 500ms;
+}
+#responseSection li{
+  background-color: lightgrey;
+}
+#responseSection p{
+  margin-top: .5rem;
 }

@@ -7,10 +7,8 @@ function PromptListItem({ item, onRemovePrompt }) {
 
   return(
     <li>
-      <span>Prompt: </span><span>{item.userPrompt}</span>
-      <br/>
-      <span>OpenAI:</span><span>{item.openaiResponse}</span>
-      <br/>
+      <p>Prompt: {item.userPrompt}</p>
+      <p>OpenAI:{item.openaiResponse}</p>
       {/*onClick event calls onRemovePrompt inline handler accepting the items ID used to filter and remove this list element within the App component*/}
       <button id="removeButton" onClick={() => onRemovePrompt(item.id)}>Remove</button>
     </li>

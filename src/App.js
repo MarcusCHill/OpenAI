@@ -50,6 +50,8 @@ function App() {
   return (
     <>
       <h1>Fun with OpenAI</h1>
+      <h2>Try a preset or enter your own prompt in the input feild below!</h2>
+      <p>Learn more about OpenAI and GTP-3 <a href="https://beta.openai.com/"><strong>here.</strong></a></p>
       <section>
         <PromptPresets onAddPrompt={addPrompt}/>
         <PromptForm onAddPrompt={addPrompt}/>
